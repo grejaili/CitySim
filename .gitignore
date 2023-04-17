@@ -1,0 +1,41 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+
+# Visual Studio / MonoDevelop generated files
+/*.csproj
+/*.unityproj
+/*.sln
+/*.suo
+/*.tmp
+/*.user
+/*.userprefs
+/*.pidb
+/*.booproj
+/*.orig
+
+# Unity3D generated meta files
+/*.asset.meta
+/*.prefab.meta
+/*.unity.meta
+
+# Rider generated files
+.idea/
+*.csproj.user
+
+# External tool folders
+/[Aa]ssets/Plugins/
+
+# Android generated files
+/*.apk
+/*.aar
+/*.gradle
+
+# Xcode generated files
+/*.xcodeproj/
+/*.xcworkspace/
+/Assets/Plugins/iOS/GoogleMobileAds.framework/
