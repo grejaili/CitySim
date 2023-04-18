@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3947910919295569326
+--- !u!1001 &3888158087988693249
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -13,15 +13,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7705567489048174976, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.491445
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7705567489048174976, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6999788
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7705567489048174976, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.032629
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7705567489048174976, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53,8 +53,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7705567489048174982, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
       propertyPath: m_Name
-      value: NPCSeller Variant
+      value: NPCSeller
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7388155316197549173, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
+    - {fileID: 6517227026053988151, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
+--- !u!1 &6852842424006551687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7705567489048174982, guid: 1d55ec80c25404139b6a3d147aade845, type: 3}
+  m_PrefabInstance: {fileID: 3888158087988693249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5130405874433423843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6852842424006551687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad8851f7ee5840de977dcc1c0978e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  _inventory:
+    _items:
+    - {fileID: 11400000, guid: 39314cc5884634e478ec6501f20f322a, type: 2}
+    - {fileID: 11400000, guid: 155a58c0ef00a476c9bf2f49c779d06d, type: 2}
+    - {fileID: 11400000, guid: 1dad1a21412e84e158e1585029500c76, type: 2}
