@@ -7,7 +7,7 @@ public class NPCController : MonoBehaviour
 {
    
     public string name;
-    private bool _canInteract;
+   [SerializeField] protected bool _canInteract;
 
     protected virtual void Update()
     {
@@ -30,7 +30,7 @@ public class NPCController : MonoBehaviour
         Debug.Log("SetUP Default Interaction");
     }
  
-      void OnTriggerEnter2D(Collider2D other) 
+     protected virtual void OnTriggerEnter2D(Collider2D other) 
       {
         if (other.CompareTag("Player"))
         {
@@ -40,10 +40,11 @@ public class NPCController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+         
             _canInteract = false;
             
         }

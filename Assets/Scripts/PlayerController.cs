@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     [SerializeField] Animator anim;
     public Inventory inventory;
+
+    
     
     private void Update()
     {
@@ -31,9 +33,9 @@ public class PlayerController : MonoBehaviour
 
     public void OpenInventory()
     {
-        if (Input.GetKey(KeyCode.I)) 
+        if (Input.GetKeyUp(KeyCode.I)) 
         {
-     
+            InteractionManager.instance.OpenClosePlayerInventory();
         }
     }
     

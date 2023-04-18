@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] List<string> items;
     [SerializeField] private float money;
+    
 
     public List<string> GetItems()
     {
