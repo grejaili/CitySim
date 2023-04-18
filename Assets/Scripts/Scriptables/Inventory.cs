@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 [System.Serializable]
-public class Inventory
+public class Inventory : MonoBehaviour
 {
     [SerializeField] List<string> items;
     [SerializeField] private float money;

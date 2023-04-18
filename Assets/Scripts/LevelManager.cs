@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 public class LevelManager : MonoBehaviour
 {
@@ -12,9 +10,15 @@ public class LevelManager : MonoBehaviour
     
     
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         AllItems.CreateAllItems();
+    }
+
+    void Start()
+    {
+
         instance = this;
         mapGenerator.Create();
         player.transform.position = _grid.WorldToCell(mapGenerator.GetCenterOfTheMap());

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour
 {
+   
     public string name;
     private bool _canInteract;
 
@@ -22,7 +23,6 @@ public class NPCController : MonoBehaviour
         {
             Interaction();
         }
-   
     }
 
     protected virtual void Interaction()
