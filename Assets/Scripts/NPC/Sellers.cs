@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 
 public class Sellers : NPCController
@@ -20,15 +15,14 @@ public class Sellers : NPCController
 
     public void OpenTradeWindow()
     {
-        
-    InteractionManager.instance.OpenCloseNPCInventory();
-    
+        InteractionManager.instance.OpenCloseNPCInventory();
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
-       InteractionManager.instance.npcInventory.inventoryReference = inventory;
+        InteractionManager.instance.npcInventory.inventoryReference = inventory;
+        
     }
 
     protected override void OnTriggerExit2D(Collider2D other)
@@ -38,6 +32,5 @@ public class Sellers : NPCController
         _canInteract = false;
         InteractionManager.instance.OpenCloseNPCInventory(false);
         InteractionManager.instance.npcInventory.inventoryReference = null;
-
     }
 }

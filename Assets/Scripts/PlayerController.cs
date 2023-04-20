@@ -6,11 +6,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    [SerializeField] Animator anim;
+   [SerializeField] AnimController anim;
     public Inventory inventory;
 
-    
-    
+    public GameObject frostMaiden;
+    public GameObject GrayArmor;
     private void Update()
     {
         Move();
@@ -22,15 +22,22 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0);
+        Debug.Log(moveHorizontal+" "+moveVertical);
         movement.Normalize();
         if (movement != Vector3.zero)
         {
             transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
         }
-        anim.SetFloat("Speed", movement.magnitude);
+       anim.SetAnimation((int)moveHorizontal,(int)moveVertical);
+        
     }
 
-
+    public void ChangeClothes()
+    {
+        anim = Instantiate(frostMaiden, transform, false).GetComponent<AnimController>();
+    }
+    
+    
     public void OpenInventory()
     {
         if (Input.GetKeyUp(KeyCode.I)) 

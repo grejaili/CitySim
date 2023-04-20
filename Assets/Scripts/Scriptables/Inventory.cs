@@ -8,20 +8,19 @@ using UnityEngine.Serialization;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] List<string> items;
-    [SerializeField] private float money;
-    
-
+    [SerializeField] public float money;
+    [HideInInspector] public int selectedItem;
     public List<string> GetItems()
     {
         return items;
     }
 
-    private void RemoveItem(string itemToRemove)
+    public void RemoveItem(string itemToRemove)
     {
         items.Remove(itemToRemove);
     }
 
-    private void AddItem(string itemToAdd)
+    public void AddItem(string itemToAdd)
     {
         items.Add(itemToAdd);
     }
